@@ -7,8 +7,8 @@ const deviceSchema = new mongoose.Schema({
         required: true,
     },
     deviceId: {
-        type: String,
-        required: [true, 'Device ID is required'],
+        type: String, // Unique deviceId generated via uuid
+        required: true,
         unique: true
     },
     deviceName: {

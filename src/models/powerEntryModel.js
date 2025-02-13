@@ -7,7 +7,7 @@ const powerEntrySchema = new mongoose.Schema({
         required: true,
     },
     deviceId: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: String,
         ref: 'Device',
         required: true,
     },
