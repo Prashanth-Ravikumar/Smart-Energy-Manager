@@ -86,13 +86,13 @@ const getDevice = async (req, res) => {
 const updateDevice = async (req, res) => {
     const { deviceId } = req.params;
     const { userId } = req.body;
-    const { deviceName, powerConsumed } = req.body;
+    const { deviceName } = req.body;
 
     try {
         // Ensure the device exists for this user
         const device = await Device.findOneAndUpdate(
             { userId, deviceId },
-            { deviceName, powerConsumed },
+            { deviceName, },
             { new: true, runValidators: true }
         );
 
